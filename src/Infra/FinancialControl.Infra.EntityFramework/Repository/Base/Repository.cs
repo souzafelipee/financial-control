@@ -1,19 +1,19 @@
 ﻿using AutoMapper;
 using FinancialContraol.Domain.Models;
-using FinancialControl.Infra.EntityFramework.DataModels;
+using FinancialControl.Infra.EntityFramework.DataModels.Base;
 using Microsoft.EntityFrameworkCore;
 using System;
 
-namespace FinancialControl.Infra.EntityFramework.Repository
+namespace FinancialControl.Infra.EntityFramework.Repository.Base
 {
-    public abstract class Repository<TContext, TDomainModel, TDataModel, TKey> 
+    public abstract class Repository<TContext, TDomainModel, TDataModel, TKey>
         : RepositoryBase<TContext, TDomainModel, TDataModel, TKey>
-        where TContext: DbContext
-        where TDomainModel: DomainModel<TKey>
+        where TContext : DbContext
+        where TDomainModel : DomainModel<TKey>
         where TDataModel : DataModel<TKey>
         where TKey : IEquatable<TKey>
     {
-        protected Repository(IDbContextFactory<TContext> contextFactory, IMapper mapper) 
+        protected Repository(IDbContextFactory<TContext> contextFactory, IMapper mapper)
             : base(contextFactory, mapper) { }
 
         protected override TContext ConfigureContext()

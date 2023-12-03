@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FinancialControl.Infra.EntityFramework.DataModels
+namespace FinancialControl.Infra.EntityFramework.DataModels.Base
 {
     public interface IDataModel<TKey> where TKey : IEquatable<TKey>
     {

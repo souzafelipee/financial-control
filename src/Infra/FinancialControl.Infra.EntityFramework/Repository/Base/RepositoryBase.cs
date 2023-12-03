@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
 using FinancialContraol.Domain.Interfaces;
 using FinancialContraol.Domain.Models;
-using FinancialControl.Infra.EntityFramework.DataModels;
+using FinancialControl.Infra.EntityFramework.DataModels.Base;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace FinancialControl.Infra.EntityFramework.Repository;
+namespace FinancialControl.Infra.EntityFramework.Repository.Base;
 
 public abstract class RepositoryBase<TContext, TDomainModel, TDataModel, TKey> : IRepository<TDomainModel, TKey>
     where TContext : DbContext
