@@ -28,7 +28,7 @@ builder.Services.AddMassTransit(x =>
     x.AddConsumers(typeof(RegisterTransactionConsumer));
     x.UsingRabbitMq((context, cfg) =>
     {
-        cfg.Host("localhost", "/", h =>
+        cfg.Host("host.docker.internal", "/", h =>
         {
             h.Username("guest");
             h.Password("guest");
