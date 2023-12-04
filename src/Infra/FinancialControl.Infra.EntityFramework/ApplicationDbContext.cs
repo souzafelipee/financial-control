@@ -26,5 +26,10 @@ namespace FinancialControl.Infra.EntityFramework
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=127.0.0.1;Database=financial-control;Uid=sa;Pwd=Senha@2023;");
+        }
     }
 }

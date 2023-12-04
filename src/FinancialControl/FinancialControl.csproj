@@ -9,8 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.25" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="6.0.25" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\FinancialControl.Application.Consumers\FinancialControl.Application.Consumers.csproj" />
+    <ProjectReference Include="..\Infra\FinancialControl.Infra.CrossCutting\FinancialControl.Infra.CrossCutting.csproj" />
+    <ProjectReference Include="..\Infra\FinancialControl.Infra.EntityFramework\FinancialControl.Infra.EntityFramework.csproj" />
   </ItemGroup>
 
 </Project>

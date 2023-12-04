@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\Application\FinancialControl.Application\FinancialControl.Application.csproj" />
+    <ProjectReference Include="..\src\Domain\FinancialControl.Domain.Events\FinancialControl.Domain.Events.csproj" />
+  </ItemGroup>
+
+</Project>

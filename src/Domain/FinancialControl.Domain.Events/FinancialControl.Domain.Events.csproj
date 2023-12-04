@@ -6,4 +6,10 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="FinancialControl.Domain">
+      <HintPath>..\FinancialControl.Domain\obj\Debug\net6.0\ref\FinancialControl.Domain.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
