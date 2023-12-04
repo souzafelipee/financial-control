@@ -1,11 +1,7 @@
 using FinancialControl.Application.Consumers;
-using FinancialControl.Application.Interfaces.UseCases;
-using FinancialControl.Application.UseCases.Transaction;
-using FinancialControl.Domain.Interfaces.Repositories;
 using FinancialControl.Infra.CrossCutting.IoC;
 using FinancialControl.Infra.CrossCutting.Mappers;
 using FinancialControl.Infra.EntityFramework;
-using FinancialControl.Infra.EntityFramework.Repository;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
 
