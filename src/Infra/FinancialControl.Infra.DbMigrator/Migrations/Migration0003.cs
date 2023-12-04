@@ -12,7 +12,7 @@ namespace FinancialControl.Infra.DbMigrator.Migrations
             {
                 account_id = "136CA601-5C9C-4AD1-8CAA-95289F1A6131",
                 balance = 0,
-                updated_at = DateTime.Now
+                updated_at = DateTime.UtcNow
             });
         }
     }

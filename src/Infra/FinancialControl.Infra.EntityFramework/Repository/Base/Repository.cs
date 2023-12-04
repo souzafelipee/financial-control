@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using FinancialContraol.Domain.Models;
+using FinancialControl.Domain.Models.Base;
 using FinancialControl.Infra.EntityFramework.DataModels.Base;
 using Microsoft.EntityFrameworkCore;
 using System;

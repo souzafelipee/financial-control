@@ -8,7 +8,10 @@
 
   <ItemGroup>
     <Folder Include="IoC\" />
-    <Folder Include="Mappers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinancialControl.Infra.EntityFramework\FinancialControl.Infra.EntityFramework.csproj" />
   </ItemGroup>
 
 </Project>

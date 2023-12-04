@@ -19,7 +19,7 @@ namespace FinancialControl.Infra.DbMigrator.Migrations
                 {
                     account_id = Guid.NewGuid(),
                     description = "Conta Principal",
-                    created_at = DateTime.Now,
+                    created_at = DateTime.UtcNow,
                     active = true
                 });
         }

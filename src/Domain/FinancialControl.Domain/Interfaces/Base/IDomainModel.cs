@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FinancialContraol.Domain.Interfaces;
+namespace FinancialControl.Domain.Interfaces.Base;
 
 public interface IDomainModel<TKey> where TKey : IEquatable<TKey>
 {

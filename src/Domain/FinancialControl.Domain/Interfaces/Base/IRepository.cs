@@ -1,9 +1,9 @@
-﻿using FinancialContraol.Domain.Models;
+﻿using FinancialControl.Domain.Models.Base;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace FinancialContraol.Domain.Interfaces;
+namespace FinancialControl.Domain.Interfaces.Base;
 
 public interface IRepository<TDomainModel, TKey>
     where TDomainModel : IDomainModel<TKey>
