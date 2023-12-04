@@ -10,7 +10,6 @@ Instruções:
 Para registrar um lançamento, publicar um evento na Fila do RabbitMQ.
 Acessar o console do RabbitMQ pelo link http://localhost:15672/
 Usuário: guest
-
 Senha: guest
 
 Selecionar a fila que foi criada:
