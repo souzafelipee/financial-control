@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\FinancialControl.Application.Consumers\FinancialControl.Application.Consumers.csproj" />
+    <ProjectReference Include="..\Api\FinancialControl.Api\FinancialControl.Api.csproj" />
     <ProjectReference Include="..\Infra\FinancialControl.Infra.CrossCutting\FinancialControl.Infra.CrossCutting.csproj" />
   </ItemGroup>
 

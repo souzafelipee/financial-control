@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using FinancialControl.Application.UseCases.Base;
 using FinancialControl.Application.UseCases.Transaction.Requests;
+using FinancialControl.Domain.Enums;
 using FinancialControl.Domain.Events;
 using FinancialControl.Domain.Models;
 using FinancialControl.Infra.EntityFramework.DataModels;
@@ -23,6 +25,8 @@ namespace FinancialControl.Infra.CrossCutting.Mappers
 
             CreateMap<TransactionDataModel, TransactionModel>()
                 .ForMember(dest => dest.TransactionType, opt => opt.MapFrom(src => src.TransactionTypeId));
+
+            CreateMap<TransactionModel, TransactionResponse>();
 
             CreateMap<RegisterTransactionEvent, RegisterTransactionRequest>();
         }
