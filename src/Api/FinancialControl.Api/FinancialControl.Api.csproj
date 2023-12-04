@@ -8,4 +8,8 @@
 	<NoDefaultLaunchSettingsFile>true</NoDefaultLaunchSettingsFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\FinancialControl.Application\FinancialControl.Application.csproj" />
+  </ItemGroup>
+
 </Project>
