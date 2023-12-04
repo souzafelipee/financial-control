@@ -7,7 +7,7 @@ Financial Control
 
 Instruções:
 
-Para registrar um lançamento, Publicar um evento na Fila do RabbitMQ.
+Para registrar um lançamento, publicar um evento na Fila do RabbitMQ.
 Acessar o console do RabbitMQ pelo link http://localhost:15672/
 Usuário: guest
 Senha: guest
