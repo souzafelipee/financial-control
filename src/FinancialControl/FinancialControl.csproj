@@ -21,7 +21,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\FinancialControl.Application.Consumers\FinancialControl.Application.Consumers.csproj" />
     <ProjectReference Include="..\Infra\FinancialControl.Infra.CrossCutting\FinancialControl.Infra.CrossCutting.csproj" />
-    <ProjectReference Include="..\Infra\FinancialControl.Infra.EntityFramework\FinancialControl.Infra.EntityFramework.csproj" />
   </ItemGroup>
 
 </Project>
