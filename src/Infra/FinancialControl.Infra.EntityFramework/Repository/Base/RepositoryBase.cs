@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using FinancialContraol.Domain.Interfaces;
-using FinancialContraol.Domain.Models;
+using FinancialControl.Domain.Interfaces.Base;
+using FinancialControl.Domain.Models.Base;
 using FinancialControl.Infra.EntityFramework.DataModels.Base;
 using Microsoft.EntityFrameworkCore;
 using System;

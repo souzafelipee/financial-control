@@ -1,7 +1,7 @@
-﻿using FinancialContraol.Domain.Interfaces;
+﻿using FinancialControl.Domain.Interfaces.Base;
 using System;
 
-namespace FinancialContraol.Domain.Models
+namespace FinancialControl.Domain.Models.Base
 {
     public abstract class DomainModel<TKey> : IDomainModel<TKey> where TKey : IEquatable<TKey>
     {
