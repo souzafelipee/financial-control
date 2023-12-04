@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Application\FinancialControl.Application\FinancialControl.Application.csproj" />
-    <ProjectReference Include="..\src\Domain\FinancialControl.Domain.Events\FinancialControl.Domain.Events.csproj" />
+    <ProjectReference Include="..\..\Domain\FinancialControl.Domain.Events\FinancialControl.Domain.Events.csproj" />
+    <ProjectReference Include="..\FinancialControl.Application\FinancialControl.Application.csproj" />
   </ItemGroup>
 
 </Project>
