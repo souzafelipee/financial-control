@@ -6,7 +6,7 @@ Financial Control
    1- SQL Server
    2- RabbitMQ
    3- sqltools para criação do banco de dados
-   3- Execução de Migrations a partir do projeto FinancialControl.Infra.DbMigrator.Runner
+   4- Execução de Migrations a partir do projeto FinancialControl.Infra.DbMigrator.Runner
 
 Após isso a aplicação pode ser acessada via swagger no link: http://localhost:32789/swagger/index.html
 
