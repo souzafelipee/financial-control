@@ -21,7 +21,7 @@ namespace FinancialControl.Infra.EntityFramework.Repository
         {
             using var context = ConfigureContext();
             return await context.AccountBalances
-                .Where(x => x.AccountId == accountId && x.UpdatedAt >= date && x.UpdatedAt <= date)
+                .Where(x => x.AccountId == accountId && x.BalanceDate >= date && x.BalanceDate <= date)
                 .ProjectTo<AccountBalanceModel>(Mapper.ConfigurationProvider)
                 .FirstOrDefaultAsync();
         }

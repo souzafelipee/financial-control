@@ -7,7 +7,7 @@ namespace FinancialControl.Infra.EntityFramework.DataModels
     {
         public Guid AccountId { get; set; }
         public decimal Balance { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime BalanceDate { get; set; }
 
         public virtual AccountDataModel Account { get; set; }
     }

@@ -18,9 +18,9 @@ public class AccountBalanceMap : IEntityTypeConfiguration<AccountBalanceDataMode
             .HasColumnType("decimal(18, 2)")
             .HasColumnName("balance");
 
-        entity.Property(e => e.UpdatedAt)
+        entity.Property(e => e.BalanceDate)
             .HasColumnType("datetime")
-            .HasColumnName("updated_at");
+            .HasColumnName("transaction_date");
 
         entity.HasOne(d => d.Account)
             .WithMany(p => p.AccountBalances)

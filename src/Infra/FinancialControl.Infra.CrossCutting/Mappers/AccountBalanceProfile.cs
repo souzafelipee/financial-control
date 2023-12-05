@@ -9,11 +9,9 @@ namespace FinancialControl.Infra.CrossCutting.Mappers
     {
         public AccountBalanceProfile()
         {
-            CreateMap<AccountBalanceDataModel, AccountBalanceModel>()
-                .ForMember(dest => dest.BalanceDate, opt => opt.MapFrom(src => src.UpdatedAt));
+            CreateMap<AccountBalanceDataModel, AccountBalanceModel>();
 
-            CreateMap<AccountBalanceModel, AccountBalanceDataModel>()
-                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.BalanceDate));
+            CreateMap<AccountBalanceModel, AccountBalanceDataModel>();
         }
     }
 }

@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  financialcontrol:
+    build:
+      context: .
+      dockerfile: ./FinancialControl/Dockerfile
+    container_name: financialcontrol
+    environment:
+    - ASPNETCORE_ENVIRONMENT=Development
+    - DOTNET_USE_POLLING_FILE_WATCHER=1
+    - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+    - NUGET_FALLBACK_PACKAGES=/.nuget/fallbackpackages
+    - NUGET_PACKAGES=/.nuget/fallbackpackages    
+    ports:
+    - "32789:80"
+    - "32788:443"
+    depends_on:
+    - sql-server
+    - rabbitmq
+      
+  sql-server:
+    image: mcr.microsoft.com/mssql/server
+    container_name: sql-server
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: Senha@2023
+      PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      MSSQL_RPC_PORT: 135
+      MSSQL_PID: developer
+      MSSQL_DATABASE: FinancialControl
+    ports:
+      - "1433:1433"
+    networks:
+      - financialcontrol-network
+
+  rabbitmq:
+    image: "masstransit/rabbitmq"
+    container_name: rabbitmq
+    ports:
+      - "5671:5671"
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - financialcontrol-network
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+networks:
+    financialcontrol-network:
+      driver: bridge

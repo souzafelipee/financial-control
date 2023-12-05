@@ -64,7 +64,7 @@ namespace FinancialControl.Infra.DbMigrator
                 .WithColumn("balance")
                     .AsDecimal(18, 2)
                     .NotNullable()
-                .WithColumn("updated_at")
+                .WithColumn("balance_date")
                     .AsDateTime()
                     .NotNullable();
 

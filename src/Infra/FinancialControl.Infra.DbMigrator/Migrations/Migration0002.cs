@@ -17,7 +17,7 @@ namespace FinancialControl.Infra.DbMigrator.Migrations
             Insert.IntoTable("Account")
                 .Row(new
                 {
-                    account_id = Guid.NewGuid(),
+                    account_id = "136CA601-5C9C-4AD1-8CAA-95289F1A6131",
                     description = "Conta Principal",
                     created_at = DateTime.UtcNow,
                     active = true
