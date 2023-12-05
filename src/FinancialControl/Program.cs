@@ -18,7 +18,7 @@ builder.Services.AddAutoMapper(typeof(TransactionProfile));
 
 builder.Services.AddDbContextFactory<ApplicationDbContext>(options =>
 {
-    options.UseSqlServer("Server=127.0.0.1;Database=financial-control;Uid=sa;Pwd=Senha@2023;");
+    options.UseSqlServer("Server=host.docker.internal;Database=financial-control;Uid=sa;Pwd=Senha@2023;Encrypt=false;TrustServerCertificate=True;MultiSubnetFailover=true;");
 });
 
 builder.Services.AddDependencyInjection();

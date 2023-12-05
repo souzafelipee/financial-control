@@ -20,7 +20,7 @@ public class AccountBalanceMap : IEntityTypeConfiguration<AccountBalanceDataMode
 
         entity.Property(e => e.BalanceDate)
             .HasColumnType("datetime")
-            .HasColumnName("transaction_date");
+            .HasColumnName("balance_date");
 
         entity.HasOne(d => d.Account)
             .WithMany(p => p.AccountBalances)
