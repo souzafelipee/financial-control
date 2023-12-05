@@ -3,10 +3,10 @@ Financial Control
 
 1) Executar o comando "docker-compose up -d " para executar o arquivo compose que está na pasta src.
    Este comando irá subir os seguintes containeres:
-   1- SQL Server
-   2- RabbitMQ
-   3- sqltools para criação do banco de dados
-   4- Execução de Migrations a partir do projeto FinancialControl.Infra.DbMigrator.Runner
+   1) SQL Server
+   2) RabbitMQ
+   3) Sqltools para criação do banco de dados
+   4) Execução de Migrations a partir do projeto FinancialControl.Infra.DbMigrator.Runner
 
 Após isso a aplicação pode ser acessada via swagger no link: http://localhost:32789/swagger/index.html
 
