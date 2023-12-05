@@ -38,7 +38,7 @@ TransactionType:
  - 1 para débito
  - 2 para crédito
 
-Para obter o extrato, consumir a api GET /Account/Statement preenchendo a Data Solicitada para relatório no formado YYYY-MM-DD
+Para obter o extrato, consumir a api GET /Account/Statement preenchendo a Data Solicitada para relatório no formato YYYY-MM-DD
 
 - api pode ser acessada via swagger
 
