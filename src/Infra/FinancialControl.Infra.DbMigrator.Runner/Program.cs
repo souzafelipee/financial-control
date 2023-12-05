@@ -25,7 +25,7 @@ public class Program
                     .ConfigureRunner(rb => rb
                         .AddSqlServer()
                         .WithGlobalCommandTimeout(new TimeSpan(0,0, 30))
-                        .WithGlobalConnectionString(o.ConnectionString)
+                        .WithGlobalConnectionString("Server=host.docker.internal;Database=financial-control;Uid=sa;Pwd=Senha@2023;Encrypt=false;TrustServerCertificate=True;MultiSubnetFailover=true;")
                         .ScanIn(migrationAssembly).For.Migrations()
                         .ScanIn(typeof(MigrationZero).Assembly).For.Migrations()
                     )

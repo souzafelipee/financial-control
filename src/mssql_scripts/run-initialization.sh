@@ -1,0 +1,1 @@
+sleep 25 && /opt/mssql-tools/bin/sqlcmd -S host.docker.internal -U SA -P Senha@2023 -d master -Q "CREATE DATABASE [financial-control];"

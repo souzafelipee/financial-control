@@ -18,6 +18,43 @@ services:
     depends_on:
     - sql-server
     - rabbitmq
+    - mssqltools
+    
+  financialcontrol-migration:
+    build:
+      context: .
+      dockerfile: ./Infra/FinancialControl.Infra.DbMigrator.Runner/Dockerfile
+    container_name: financialcontrol-migration
+    command:
+      - '/bin/sh'
+      - '-c'
+      - '/bin/sleep 30 && /prog "first argument"'
+    environment:
+    - ASPNETCORE_ENVIRONMENT=Development
+    - DOTNET_USE_POLLING_FILE_WATCHER=1
+    - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+    - NUGET_FALLBACK_PACKAGES=/.nuget/fallbackpackages
+    - NUGET_PACKAGES=/.nuget/fallbackpackages
+    depends_on:
+      mssqltools:
+        condition: service_completed_successfully
+      rabbitmq:
+        condition: service_started
+      sql-server:
+        condition: service_started
+    networks:
+    - financialcontrol-network
+    
+  mssqltools:
+    image: mcr.microsoft.com/mssql-tools
+    command: /bin/bash ./opt/mssql_scripts/run-initialization.sh
+    stdin_open: true
+    depends_on:
+      - sql-server
+    volumes:
+      - ./mssql_scripts:/opt/mssql_scripts
+    networks:
+      - financialcontrol-network
       
   sql-server:
     image: mcr.microsoft.com/mssql/server
@@ -29,6 +66,7 @@ services:
       MSSQL_RPC_PORT: 135
       MSSQL_PID: developer
       MSSQL_DATABASE: FinancialControl
+      MSSQL_IP_ADDRESS: 0.0.0.0
     ports:
       - "1433:1433"
     networks:

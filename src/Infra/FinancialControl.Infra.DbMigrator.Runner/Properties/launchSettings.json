@@ -3,6 +3,9 @@
     "FinancialControl.Infra.DbMigrator.Runner": {
       "commandName": "Project",
       "commandLineArgs": "-c \"Server=127.0.0.1;Database=financial-control;Uid=sa;Pwd=Senha@2023;\""
+    },
+    "Docker": {
+      "commandName": "Docker"
     }
   }
 }
